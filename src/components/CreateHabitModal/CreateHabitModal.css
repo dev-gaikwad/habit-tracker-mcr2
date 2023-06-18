@@ -18,7 +18,8 @@
 
 .modal {
   margin: 0.5rem;
-  width: 50vh;
+  width: 90vw;
+  max-width: 600px;
   padding: 1rem;
   background: var(--background-overlay-color);
   color: var(--white);

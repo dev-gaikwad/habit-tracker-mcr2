@@ -9,6 +9,7 @@
 
 @media (max-width: 640px) {
   .tiles-container {
+    width: 95vw;
     flex-direction: column;
   }
 }
