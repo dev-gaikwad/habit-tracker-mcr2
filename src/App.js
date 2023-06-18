@@ -13,7 +13,7 @@ const App = () => {
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/archive' element={<ArchivePage />} />
-            <Route path='/details/:title' element={<Details />} />
+            <Route path='/details/:id' element={<Details />} />
           </Routes>
         </HabitContextProvider>
       </Router>

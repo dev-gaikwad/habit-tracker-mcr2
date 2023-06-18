@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom';
 import { useHabit } from '../../context/HabitContext';
 
 const Details = () => {
-  const { title } = useParams();
+  const { id } = useParams();
   const {
     allHabits,
     newHabit,
@@ -14,7 +14,7 @@ const Details = () => {
     deleteHabitHandler,
   } = useHabit();
 
-  const selectedHabit = allHabits?.find((habit) => habit.title === title);
+  const selectedHabit = allHabits?.find((habit) => habit.title === id);
 
   useEffect(() => {
     if (selectedHabit) setNewHabit({ ...selectedHabit });
@@ -101,7 +101,7 @@ const Details = () => {
               </button>
               <button
                 className='btn-danger'
-                onClick={() => deleteHabitHandler(selectedHabit.title)}
+                onClick={() => deleteHabitHandler(selectedHabit.id)}
               >
                 Delete
               </button>

@@ -1,18 +1,19 @@
 import { createContext, useContext, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { v4 as uuid } from 'uuid';
 
 export const HabitContext = createContext();
 
-const newHabitInitialState = {
-  title: '',
-  frequency: 'daily',
-  goal: '1',
-  timeOfDay: 'morning',
-  // startDate: new Date().toLocaleDateString('en-GB'),
-  status: 'active',
-};
-
 export const HabitContextProvider = ({ children }) => {
+  const newHabitInitialState = {
+    id: uuid(),
+    title: '',
+    frequency: 'daily',
+    goal: '1',
+    timeOfDay: 'morning',
+    status: 'active',
+  };
+
   const [allHabits, setAllHabits] = useState(() => {
     return JSON.parse(sessionStorage.getItem('habits')) ?? [];
   });
@@ -24,7 +25,7 @@ export const HabitContextProvider = ({ children }) => {
     e.preventDefault();
     const habitArray = [...allHabits];
     const habitIndex = habitArray.findIndex(
-      (habit) => habit.title === newHabit.title
+      (habit) => habit.id === newHabit.id
     );
 
     if (habitIndex !== -1) {
@@ -40,9 +41,9 @@ export const HabitContextProvider = ({ children }) => {
     setNewHabit(newHabitInitialState);
   };
 
-  const deleteHabitHandler = (title) => {
+  const deleteHabitHandler = (id) => {
     const habitArray = [...allHabits];
-    const updatedArray = habitArray.filter((habit) => habit.title !== title);
+    const updatedArray = habitArray.filter((habit) => habit.title !== id);
     setAllHabits(updatedArray);
     navigate('/');
   };
