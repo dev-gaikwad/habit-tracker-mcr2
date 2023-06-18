@@ -1,0 +1,70 @@
+.modal-container {
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal {
+  width: 50vh;
+  padding: 1rem;
+  background: var(--background-overlay-color);
+  color: var(--white);
+  z-index: 100;
+}
+
+.modal-heading {
+  color: var(--secondary-color);
+  text-align: center;
+  margin: 0.5rem;
+}
+
+.habit-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.habit-form input {
+  box-shadow: rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--x-light-secondary-color);
+  height: 2rem;
+  width: 100%;
+  outline: none;
+  font-family: inherit;
+  margin: 0.25rem 0rem;
+  color: var(--primary-text);
+  background-color: var(--top-gradient);
+  padding: 0rem 0.5rem;
+}
+
+.input-container {
+  margin: 0.5rem 0rem;
+}
+
+.input-container select {
+  padding: 0.5rem;
+  width: fit-content;
+  margin: 0rem 0.5rem;
+  background-color: var(--background-overlay-color);
+  color: var(--primary-text);
+}
+
+.modal-buttons-container {
+  display: flex;
+  gap: 0.25rem;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 0.25rem;
+}
