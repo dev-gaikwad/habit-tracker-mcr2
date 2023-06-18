@@ -28,7 +28,7 @@ const Details = () => {
   return (
     <>
       {selectedHabit ? (
-        <div>
+        <div className='container'>
           <form className='habit-form' onSubmit={(e) => editHabitHandler(e)}>
             <div className='input-container'>
               <label htmlFor='title'>Title:</label>
