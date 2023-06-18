@@ -14,7 +14,7 @@ const Details = () => {
     deleteHabitHandler,
   } = useHabit();
 
-  const selectedHabit = allHabits?.find((habit) => habit.title === id);
+  const selectedHabit = allHabits?.find((habit) => habit.id === id);
 
   useEffect(() => {
     if (selectedHabit) setNewHabit({ ...selectedHabit });

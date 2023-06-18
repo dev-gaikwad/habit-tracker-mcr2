@@ -7,7 +7,7 @@ const HabitTile = ({ habit }) => {
   const navigate = useNavigate();
   return (
     <div className='tile-wrapper'>
-      <article onClick={() => navigate(`/details/${habit.title}`)}>
+      <article onClick={() => navigate(`/details/${habit.id}`)}>
         <h3>{habit.title}</h3>
         <p>
           {habit.goal} times {habit.frequency} in the {habit.timeOfDay}

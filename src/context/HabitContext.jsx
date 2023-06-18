@@ -43,7 +43,7 @@ export const HabitContextProvider = ({ children }) => {
 
   const deleteHabitHandler = (id) => {
     const habitArray = [...allHabits];
-    const updatedArray = habitArray.filter((habit) => habit.title !== id);
+    const updatedArray = habitArray.filter((habit) => habit.id !== id);
     setAllHabits(updatedArray);
     navigate('/');
   };
