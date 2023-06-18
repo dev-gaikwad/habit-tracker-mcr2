@@ -17,6 +17,7 @@
 }
 
 .modal {
+  margin: 0.5rem;
   width: 50vh;
   padding: 1rem;
   background: var(--background-overlay-color);

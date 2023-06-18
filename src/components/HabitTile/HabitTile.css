@@ -18,3 +18,9 @@ article {
 article p {
   color: var(--secondary-text);
 }
+
+@media (max-width: 640px) {
+  .tile-wrapper {
+    width: 100%;
+  }
+}

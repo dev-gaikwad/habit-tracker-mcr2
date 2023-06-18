@@ -6,3 +6,9 @@
   flex-wrap: wrap;
   margin: auto;
 }
+
+@media (max-width: 640px) {
+  .tiles-container {
+    flex-direction: column;
+  }
+}
